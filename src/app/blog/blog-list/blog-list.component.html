@@ -1,0 +1,7 @@
+<div class="blog-list">
+  <ul>
+    <li *ngFor="let blogEl of blogs; let i = index">
+      <app-blog-item [blog]="blogEl" [id]="i"></app-blog-item>  
+    </li>  
+  </ul>
+</div>

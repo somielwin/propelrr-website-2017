@@ -1,0 +1,130 @@
+
+.swipe-wrapper {
+	height: calc(100vh - 70px);
+
+}
+
+.flex-wrap {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	flex-wrap: nowrap;
+	width: calc(100% + 30px);
+	position: relative;
+	margin-left: -15px;
+}
+
+.box-wrap {
+	width: 85vw;
+	height: 100%;
+	position: relative;
+	margin-right: 15px;
+	background:#faa221;
+	float: left;
+    overflow: hidden;
+    padding: 20px 15px 60px 15px;
+    box-shadow: 3px 4px 10px rgba(0,0,0,0.16);
+}
+
+.h-services {
+    background:#faa221 url('../../assets/images/h-services-bg.jpg') no-repeat bottom right;
+    background-size: contain;
+}
+
+.h-product {
+    background:#008dba url('../../assets/images/h-product-bg.jpg') no-repeat bottom right;
+    background-size: contain;
+}
+
+.box-wrap .btn {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    display: inline-block;
+    padding: 0px 15px;
+    text-transform: uppercase;
+    background: #fff;
+    line-height: 40px;
+    color: #ee6730;
+    font-weight: 700;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: calc(595vw + 150px);
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+.h-item h1 {
+    font-size: 32px;
+    font-family: 'GothamBlack', sans-serif;
+    color: #fff;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.h-item h1 span {
+    display: block;
+}
+
+.h-item h2 span {
+    display: block;
+    opacity: 0.6;
+}
+
+.h-item h2 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.h-item h3 {
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'GothamBlack', sans-serif;
+    padding-bottom: 15px;
+}
+
+.h-item h4 {
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.h-item p {
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+
+@media only screen and (min-width: 767px) {
+
+    #scroller {
+        width: 3660px;
+    }
+
+    .box-wrap.activated {
+        width: 900px;
+    }
+}
