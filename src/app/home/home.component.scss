@@ -22,6 +22,7 @@
 	float: left;
   overflow: hidden;
 	@include box-shadow(3px, 4px, 10px, rgba(0,0,0,0.16));
+	@include transition(all, 0.5s, ease-in-out);
 }
 
 .h-services {
