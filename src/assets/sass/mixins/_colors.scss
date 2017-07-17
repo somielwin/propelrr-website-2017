@@ -1,7 +1,7 @@
 //Backgrounds
 @mixin button-base($color: $brand-gray) {
-  background-color: $color;
-  color: rgba(255,255,255, .70);
+  background-color: $color !important;
+  color: rgba(255,255,255, .80);
 
   h1, h2, h3 {
     color: rgb(255,255,255);
@@ -12,7 +12,7 @@
   }
 
   p, li {
-    color: rgba(255,255,255, .70);
+    color: rgba(255,255,255, .80);
   }
 
   button, .btn {
@@ -23,5 +23,4 @@
       background: lighten($color, 40%);
     }
   }
-
 }

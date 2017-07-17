@@ -39,7 +39,7 @@ body {
   @include font-full(secondary, 22, 32);
   color: $primary-color;
   font-weight: 400;
-  background: url('../src/assets/images/propelrr.png') no-repeat center;
+  background: url('/assets/images/propelrr.png') no-repeat center;
   background-size: 300px 443px;
   background-attachment: fixed;
   background-position: 180px -35px;

@@ -1,7 +1,7 @@
+@import "../../_stacks";
 
 .swipe-wrapper {
 	height: calc(100vh - 70px);
-
 }
 
 .flex-wrap {
@@ -19,34 +19,41 @@
 	height: 100%;
 	position: relative;
 	margin-right: 15px;
-	background:#faa221;
 	float: left;
-    overflow: hidden;
-    padding: 20px 15px 60px 15px;
-    box-shadow: 3px 4px 10px rgba(0,0,0,0.16);
+  overflow: hidden;
+	@include box-shadow(3px, 4px, 10px, rgba(0,0,0,0.16));
 }
 
 .h-services {
-    background:#faa221 url('../../assets/images/h-services-bg.jpg') no-repeat bottom right;
-    background-size: contain;
+    background: url('../../assets/images/h-services-bg.jpg') no-repeat bottom right;
+    background-size: cover;
+
+		h3 {
+			@include font-sizing(150,1);
+		}
 }
 
 .h-product {
-    background:#008dba url('../../assets/images/h-product-bg.jpg') no-repeat bottom right;
-    background-size: contain;
+    background: url('../../assets/images/h-product-bg.jpg') no-repeat bottom right;
+    background-size: cover;
 }
 
-.box-wrap .btn {
-    position: absolute;
-    bottom: 15px;
-    right: 0;
-    display: inline-block;
-    padding: 0px 15px;
-    text-transform: uppercase;
-    background: #fff;
-    line-height: 40px;
-    color: #ee6730;
-    font-weight: 700;
+ul {
+	margin: 0;
+	li {
+		margin: 0.5em 0;
+	}
+}
+
+h5 {
+	@include font-sizing(25,10);
+}
+
+.btn {
+	position: absolute;
+	right: 0;
+	bottom: 130px;
+
 }
 
 #scroller {
@@ -71,52 +78,6 @@
     -o-text-size-adjust: none;
     text-size-adjust: none;
 }
-
-.h-item h1 {
-    font-size: 32px;
-    font-family: 'GothamBlack', sans-serif;
-    color: #fff;
-    line-height: 32px;
-    text-transform: uppercase;
-}
-
-.h-item h1 span {
-    display: block;
-}
-
-.h-item h2 span {
-    display: block;
-    opacity: 0.6;
-}
-
-.h-item h2 {
-    font-weight: 700;
-    font-size: 18px;
-    color: #fff;
-    line-height: 20px;
-    margin-bottom: 15px;
-}
-
-.h-item h3 {
-    font-size: 28px;
-    line-height: 30px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: 'GothamBlack', sans-serif;
-    padding-bottom: 15px;
-}
-
-.h-item h4 {
-    color: #fff;
-    padding-bottom: 15px;
-}
-
-.h-item p {
-    color: #fff;
-    padding-bottom: 10px;
-}
-
 
 @media only screen and (min-width: 767px) {
 
