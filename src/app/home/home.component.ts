@@ -10,6 +10,7 @@ import {
   animate 
 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Ng2DeviceService } from 'ng2-device-detector';
 import * as IScroll from 'iscroll';
 import * as $ from 'jquery';
 
@@ -33,10 +34,10 @@ import * as $ from 'jquery';
 
 export class HomeComponent implements OnInit, AfterViewInit {
   state = 'default'
+  deviceInfo = null;
 
-  constructor(meta: Meta, title: Title,  private renderer : Renderer2) {
+  constructor(meta: Meta, title: Title,  private renderer : Renderer2, private deviceService: Ng2DeviceService) {
     title.setTitle('Homepage | Propelrr');
-
     meta.addTags([
       {name: 'author', content: 'Aviators'},
       {name: 'keywords', content: ''},
@@ -45,12 +46,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    $('body').addClass('adasd');
+    this.deviceInfo = this.deviceService.getDeviceInfo();
+    this.deviceInfo.device
+
+    $('body').addClass(this.deviceInfo.device);
+    console.log(this.deviceInfo);
   }
 
   ngAfterViewInit() {
     
 
+  }
+
+  epicFunction() {
+    
   }
   
 }

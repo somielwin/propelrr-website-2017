@@ -15,8 +15,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    $(window).load(function(){
-      $('html, body').scrollTo(0,1);
-    });
+    // $(window).load(function(){
+    //   window.scrollTo(0,1);
+    //   console.log('remove address bar');
+    // });
   }
 }

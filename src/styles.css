@@ -101,6 +101,16 @@ table {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'AdobeCaslonProRegular';
+    src: url('../src/assets/fonts/AdobeCaslonProRegular.eot');
+    src: url('../src/assets/fonts/AdobeCaslonProRegular.eot') format('embedded-opentype'),
+         url('../src/assets/fonts/AdobeCaslonProRegular.woff2') format('woff2'),
+         url('../src/assets/fonts/AdobeCaslonProRegular.woff') format('woff'),
+         url('../src/assets/fonts/AdobeCaslonProRegular.ttf') format('truetype'),
+         url('../src/assets/fonts/AdobeCaslonProRegular.svg#AdobeCaslonProRegular') format('svg');
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -114,10 +124,12 @@ body {
     background: url('../src/assets/images/propelrr.png') no-repeat center;
     background-size: 300px 443px;
     background-attachment: fixed;
-    background-position: 180px -35px;
+    background-position: 55vw -35px;
     line-height: 1.4;
     font-size: 16px;
     color: #333333;
+    height: 100%;
+    min-height: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
@@ -137,9 +149,8 @@ a {
 
 #main-content {
     position: relative;
-    height: 100vh;
+    height: calc(100vh);
     padding: 55px 15px 15px 15px;
-    overflow: hidden;
     z-index: 100;
     left: 0;
     -webkit-transform: translate(0, 0);
@@ -150,11 +161,34 @@ a {
     transition: transform 0.3s 0s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+.iphone #main-content, .android #main-content {
+    height: calc(100vh - 55px);
+}
+
 #main-content.is-slide {
     -webkit-transform: translate(300px, 0);
     -moz-transform: translate(300px, 0);
     transform: translate(300px, 0);
-    -webkit-transition: transform 0.4s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -moz-transition: transform 0.4s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: transform 0.4s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -moz-transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.swipe-wrapper {
+	height: calc(100vh - 70px);
+}
+
+.iphone .swipe-wrapper, .android .swipe-wrapper {
+	height: calc(100vh - 125px);
+}
+
+@media only screen and (min-width: 767px) {
+    #main-content {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .swipe-wrapper {
+        height: calc(100vh);
+    }
 }
