@@ -1,13 +1,13 @@
-import { 
-  Component, 
-  OnInit, 
-  AfterViewInit, 
-  Renderer2, 
-  trigger, 
-  state, 
-  style, 
-  transition, 
-  animate 
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  Renderer2,
+  trigger,
+  state,
+  style,
+  transition,
+  animate
 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import * as IScroll from 'iscroll';
@@ -16,7 +16,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.scss'],
   animations : [
     trigger('boxState', [
       state('default', style({
@@ -49,10 +49,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    
+
 
   }
-  
+
 }
 
 // var El = myScroll.pages;
