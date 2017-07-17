@@ -1,0 +1,26 @@
+//Backgrounds
+@mixin button-base($color: $brand-gray) {
+  background-color: $color !important;
+  color: rgba(255,255,255, .80);
+
+  h1, h2, h3 {
+    color: rgb(255,255,255);
+  }
+
+  p.subtitle {
+    color: rgba(255,255,255, .85);
+  }
+
+  p, li {
+    color: rgba(255,255,255, .80);
+  }
+
+  button, .btn {
+    background-color: rgb(255,255,255);
+    color: $color;
+
+    &:hover {
+      background: lighten($color, 40%);
+    }
+  }
+}

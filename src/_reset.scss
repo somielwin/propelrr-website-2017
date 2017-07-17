@@ -1,0 +1,5 @@
+@import 'assets/sass/mixins/reset/normalize_vars'; //-normalize
+@import 'assets/sass/mixins/reset/normalize'; //-normalize
+@import 'assets/sass/mixins/reset/normalize_vertical_rhythm'; //-normalize
+//initialize
+@include normalize();

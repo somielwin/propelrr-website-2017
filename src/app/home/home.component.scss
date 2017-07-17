@@ -1,0 +1,92 @@
+@import "../../_stacks";
+
+.swipe-wrapper {
+	height: calc(100vh - 70px);
+}
+
+.flex-wrap {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	flex-wrap: nowrap;
+	width: calc(100% + 30px);
+	position: relative;
+	margin-left: -15px;
+}
+
+.box-wrap {
+	width: 85vw;
+	height: 100%;
+	position: relative;
+	margin-right: 15px;
+	float: left;
+  overflow: hidden;
+	@include box-shadow(3px, 4px, 10px, rgba(0,0,0,0.16));
+	@include transition(all, 0.5s, ease-in-out);
+}
+
+.h-services {
+    background: url('../../assets/images/h-services-bg.jpg') no-repeat bottom right;
+    background-size: cover;
+
+		h3 {
+			@include font-sizing(150,1);
+		}
+}
+
+.h-product {
+    background: url('../../assets/images/h-product-bg.jpg') no-repeat bottom right;
+    background-size: cover;
+}
+
+ul {
+	margin: 0;
+	li {
+		margin: 0.5em 0;
+	}
+}
+
+h5 {
+	@include font-sizing(25,10);
+}
+
+.btn {
+	position: absolute;
+	right: 0;
+	bottom: 130px;
+
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: calc(595vw + 150px);
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+@media only screen and (min-width: 767px) {
+
+    #scroller {
+        width: 3660px;
+    }
+
+    .box-wrap.activated {
+        width: 900px;
+    }
+}

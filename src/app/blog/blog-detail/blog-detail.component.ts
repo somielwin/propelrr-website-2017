@@ -6,14 +6,14 @@ import { blogService } from '../blog.service';
 @Component({
   selector: 'app-blog-detail',
   templateUrl: './blog-detail.component.html',
-  styleUrls: ['./blog-detail.component.css']
+  styleUrls: ['./blog-detail.component.scss']
 })
 export class BlogDetailComponent implements OnInit {
   blog : Blog;
   id : number;
 
-  constructor( 
-    private blogItem : blogService, 
+  constructor(
+    private blogItem : blogService,
     private route : ActivatedRoute,
     private router: Router
     ) { }

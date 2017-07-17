@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Career } from '../career.model';  
+import { Career } from '../career.model';
 
 @Component({
   selector: 'app-career-list',
   templateUrl: './career-list.component.html',
-  styleUrls: ['./career-list.component.css']
+  styleUrls: ['./career-list.component.scss']
 })
 export class CareerListComponent implements OnInit {
 

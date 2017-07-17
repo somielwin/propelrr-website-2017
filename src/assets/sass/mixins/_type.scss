@@ -1,0 +1,29 @@
+//font size, family, line height
+@mixin font-size($sizeValue: 12 ){
+	font-size: $sizeValue + px; //fallback for old browsers
+	font-size: (0.075 * $sizeValue) + rem;
+}
+
+@mixin family($family: 'primary') {
+  @if $family == 'primary' {
+    font-family: $font-face-primary;
+  } @else {
+    font-family: $font-face-secondary;
+  }
+}
+
+@mixin line-height($heightValue: 20 ){
+	line-height: $heightValue + px; //fallback for old browsers
+	line-height: (0.075 * $heightValue) + rem;
+}
+
+@mixin font-full($family: 'primary', $sizeValue: 12, $heightValue: 20) {
+  @include family($family);
+  @include font-size($sizeValue);
+	@include line-height($heightValue);
+}
+
+@mixin font-sizing($sizeValue: 12, $heightValue: 20) {
+	@include font-size($sizeValue);
+	@include line-height($heightValue);
+}

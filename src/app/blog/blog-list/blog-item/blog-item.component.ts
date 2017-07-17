@@ -4,13 +4,13 @@ import { Blog } from '../../blog.model';
 @Component({
   selector: 'app-blog-item',
   templateUrl: './blog-item.component.html',
-  styleUrls: ['./blog-item.component.css']
+  styleUrls: ['./blog-item.component.scss']
 })
 export class BlogItemComponent implements OnInit {
 
   @Input() blog : Blog;
   @Input() id : number;
- 
+
   constructor() { }
 
   ngOnInit() {
@@ -20,4 +20,3 @@ export class BlogItemComponent implements OnInit {
   //   this.blogItem.blogSelected.emit(this.blog);
   // }
 }
-
