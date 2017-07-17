@@ -21,7 +21,9 @@
     "core-js": "^2.4.1",
     "iscroll": "^5.2.0",
     "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
     "rxjs": "^5.1.0",
+    "sass-loader": "^6.0.6",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
