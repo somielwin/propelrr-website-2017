@@ -1,6 +1,7 @@
 .box {
   padding: 25px;
   background-color: $white;
+  @include box-shadow(0,1px,2px, rgba(0,0,0,0.1))
 
   h1, h2, h3 {
     @include font-full(primary, 26, 40);
@@ -50,10 +51,14 @@
     &.subtitle {
       @include font-sizing(30,46);
     }
+
+    &.img {
+      @extend .overflow-hidden;
+    }
   }
 
   &.bx-intro {
-    background: transparent url('/assets/images/test.jpg') no-repeat center center;
+    background: $white url('/assets/images/test.jpg') no-repeat center center;
     background-size: cover;
     button, .btn {
       @include font-sizing(36,50);
@@ -69,6 +74,10 @@
       @include font-sizing(30,46);
       padding: 10px 20px;
     }
+  }
+
+  &.xpand {
+    margin: 10px 0;
   }
 
   .cards {
@@ -106,14 +115,14 @@
 
 #main-wrapper {
     position: relative;
-    overflow: hidden;
+
 }
 
 #main-content {
     position: relative;
     height: 100vh;
     padding: 55px 15px 15px 15px;
-    overflow: hidden;
+
     z-index: 100;
     left: 0;
     -webkit-transform: translate(0, 0);

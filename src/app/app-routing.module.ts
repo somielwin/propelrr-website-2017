@@ -11,12 +11,17 @@ import { CareerDetailComponent } from './career/career-detail/career-detail.comp
 import { CareerItemComponent } from './career/career-list/career-item/career-item.component';
 import { HomeComponent } from './home/home.component';
 import { homeScrollDirective } from './directives/home-scroll.directive';
+import { InnerComponent } from './inner/inner.component';
 import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {
     path: '',
     component : HomeComponent
+  },
+  {
+    path: 'inner',
+    component : InnerComponent
   },
   {
     path: 'blog',

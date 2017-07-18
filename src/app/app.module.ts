@@ -16,6 +16,7 @@ import { CareerDetailComponent } from './career/career-detail/career-detail.comp
 import { CareerItemComponent } from './career/career-list/career-item/career-item.component';
 import { HomeComponent } from './home/home.component';
 import { homeScrollDirective } from './directives/home-scroll.directive';
+import { InnerComponent } from './inner/inner.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
@@ -31,6 +32,7 @@ import { HeaderComponent } from './header/header.component';
     CareerItemComponent,
     HomeComponent,
     homeScrollDirective,
+    InnerComponent,
     HeaderComponent
   ],
   imports: [
