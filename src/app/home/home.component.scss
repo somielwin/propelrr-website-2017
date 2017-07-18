@@ -2,6 +2,10 @@
 
 .swipe-wrapper {
 	height: calc(100vh - 70px);
+
+    @include breakpoint(tablet2) {
+        height: 100vh;
+    }
 }
 
 .flex-wrap {
@@ -20,24 +24,157 @@
 	position: relative;
 	margin-right: 15px;
 	float: left;
-  overflow: hidden;
 	@include box-shadow(3px, 4px, 10px, rgba(0,0,0,0.16));
-	@include transition(all, 0.5s, ease-in-out);
+    z-index: 99;
+
+    &.activated {
+
+        z-index: 100;
+
+        @include breakpoint(tablet2) {
+            width: 74vw;
+            padding: 0;
+            box-shadow: 3px 4px 10px rgba(0,0,0,.16);
+            z-index: 100;
+            margin-right: 0;
+            background: transparent;
+
+            + .box-wrap {
+
+                .h-item-wrap {
+                    box-shadow: -5px 0 10px transparent;
+                }
+
+                + .box-wrap {
+
+                    .h-item-wrap {
+                        left: -50px;
+                    }
+                    
+                    + .box-wrap {
+
+                        .h-item-wrap {
+                            left: -100px;
+                        }
+
+                        + .box-wrap {
+
+                            .h-item-wrap {
+                                left: -150px;
+                            }
+
+                            + .box-wrap {
+
+                                .h-item-wrap {
+                                    left: -200px;
+                                }
+
+                                + .box-wrap {
+
+                                    .h-item-wrap {
+                                        left: -250px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        .h-item-wrap {
+
+            @include breakpoint(tablet2) {
+                box-shadow: -5px 0 10px transparent;
+                padding: 55px 20px 0 0;
+                width: 100%;
+                box-shadow: -5px 0 10px rgba(0,0,0,.16);
+            }
+           
+        }
+
+        .btn {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        
+    }
+
+    @include breakpoint(tablet2) {
+        width: 15vw;
+        margin-right: 0;
+        padding: 0;
+        background: transparent;
+        box-shadow: 3px 4px 10px transparent;
+
+
+        .btn {
+            opacity: 0;
+            visibility: hidden
+        }
+    }
+    
 }
 
-.h-services {
-    background: url('../../assets/images/h-services-bg.jpg') no-repeat bottom right;
-    background-size: cover;
+.h-item-wrap {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    top: 0;
+    left: 0;
+    background: transparent;
 
-		h3 {
-			@include font-sizing(150,1);
-		}
+    @include breakpoint(tablet2) {
+        padding: 0;
+        box-shadow: -5px 0 10px rgba(0,0,0,.16);
+        width: 250px;
+        transition: all .4s ease;
+        max-width: 100%;
+    }
 }
 
-.h-product {
-    background: url('../../assets/images/h-product-bg.jpg') no-repeat bottom right;
-    background-size: cover;
+.h-item-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
+
+.h-item {
+    padding: 60px 0 60px 15px;
+    background: #faa221;
+    position: relative;
+    width: 100%;
+
+    &.h-drive {
+        background: #414141 url(../../assets/images/h-services-bg.jpg) no-repeat 100% 100%;
+        background-size: cover;
+    }
+
+    &.h-services {
+        background: url('../../assets/images/h-services-bg.jpg') no-repeat bottom right;
+        background-size: cover;
+
+            h3 {
+                @include font-sizing(150,1);
+            }
+    }
+
+    &.h-product {
+        background: url('../../assets/images/h-product-bg.jpg') no-repeat bottom right;
+        background-size: cover;
+    }
+}
+
+.h-item-content {
+    max-width: 640px;
+}
+
+
 
 ul {
 	margin: 0;
@@ -53,8 +190,11 @@ h5 {
 .btn {
 	position: absolute;
 	right: 0;
-	bottom: 130px;
+	bottom: 15px;
 
+    @include breakpoint(tablet2) {
+        bottom: 130px;
+    }
 }
 
 #scroller {
@@ -78,15 +218,9 @@ h5 {
     -ms-text-size-adjust: none;
     -o-text-size-adjust: none;
     text-size-adjust: none;
-}
+    touch-action: manipulation;
 
-@media only screen and (min-width: 767px) {
-
-    #scroller {
-        width: 3660px;
-    }
-
-    .box-wrap.activated {
-        width: 900px;
+    @include breakpoint(tablet2) {
+        width: 192vw;
     }
 }

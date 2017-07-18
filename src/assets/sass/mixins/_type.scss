@@ -4,6 +4,8 @@
 	font-size: (0.075 * $sizeValue) + rem;
 }
 
+//@include font-size: (50, 55);
+
 @mixin family($family: 'primary') {
   @if $family == 'primary' {
     font-family: $font-face-primary;
@@ -22,6 +24,8 @@
   @include font-size($sizeValue);
 	@include line-height($heightValue);
 }
+
+//@include font-full: (Arial, 14, line-height);
 
 @mixin font-sizing($sizeValue: 12, $heightValue: 20) {
 	@include font-size($sizeValue);

@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.deviceInfo.device
 
     $('body').addClass(this.deviceInfo.device);
-    console.log(this.deviceInfo);
   }
 
   ngAfterViewInit() {

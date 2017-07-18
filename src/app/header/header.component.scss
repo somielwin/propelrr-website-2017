@@ -13,10 +13,9 @@ header {
     -webkit-transform: translate(-300px, 0);
     -moz-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    
-    -webkit-transition: transform 0.3s 0s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -moz-transition: transform 0.3s 0s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: transform 0.3s 0s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition: transform 0.3s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -moz-transition: transform 0.3s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: transform 0.3s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 header.is-slide {

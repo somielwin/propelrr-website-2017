@@ -20,12 +20,10 @@ export class homeScrollDirective implements OnInit {
 
         console.log(initialactiveBox);
         console.log(initialactiveBox.children);
-        console.log(initialactiveBox.parentNode.children[1]);
+        console.log(initialactiveBox.parentNode);
 
         const myScroll: IScroll = new IScroll("#scroller-wrapper", {
-            indicators: {
-                el: initialactiveBox.parentNode.children[1]
-            },
+            
             startX: 0,
 		    startY: 0,
 			scrollX: true,
@@ -56,6 +54,10 @@ export class homeScrollDirective implements OnInit {
                 // myScroll.refresh();    
             }, 200);
             
+        }); 
+
+        myScroll.on('scrollStart', function() {
+            console.log(myScroll.directionX);
         }); 
 
         // myScroll.on('scrollStart', function(){
