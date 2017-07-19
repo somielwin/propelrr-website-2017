@@ -63,7 +63,21 @@ label {
 textarea {
   resize: none;
 }
+//callout
+.call-out {
+  background-color: $white;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  z-index: 1000;
 
+  a {
+    width: 33.3%;
+    @include font-sizing(20,20);
+    text-align: center;
+  }
+}
 //buttons
 button, .btn {
   @include font-sizing(26,26);
@@ -93,5 +107,11 @@ button, .btn {
   &:active {
      transform: translateY(2px);
      box-shadow: 1px 4px 7px rgba(0,0,0,.15);
+  }
+}
+
+form {
+  > #{$form-input-buttons}:last-child {
+    margin-top: 20px;
   }
 }

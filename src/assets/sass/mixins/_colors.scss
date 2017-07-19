@@ -24,3 +24,22 @@
     }
   }
 }
+
+
+$stack-types: (
+  channels : $brand-green,
+  content  : $brand-dk-orange,
+  analytics : $brand-lt-orange,
+  Infrastructure  : $brand-gray,
+  design  : $brand-blue
+) !default;
+
+@mixin divstacks($color) {
+  border-color: $color;
+}
+
+@each $divtype, $color in $stack-types {
+  .stacks-#{$divtype} {
+    @include divstacks($color);
+  }
+}

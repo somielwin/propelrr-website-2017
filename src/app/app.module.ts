@@ -17,6 +17,8 @@ import { CareerItemComponent } from './career/career-list/career-item/career-ite
 import { HomeComponent } from './home/home.component';
 import { homeScrollDirective } from './directives/home-scroll.directive';
 import { InnerComponent } from './inner/inner.component';
+import { FeaturedWorkComponent } from './featured-work/featured-work-list.component';
+import { OurStrategyComponent } from './our-strategy/our-strategy.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
@@ -33,6 +35,8 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     homeScrollDirective,
     InnerComponent,
+    FeaturedWorkComponent,
+    OurStrategyComponent,
     HeaderComponent
   ],
   imports: [

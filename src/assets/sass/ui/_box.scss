@@ -10,6 +10,10 @@
     }
   }
 
+  > *:last-child {
+    margin-bottom: 20px;
+  }
+
   .lrg-txt {
     font-size: 150%;
   }
@@ -18,8 +22,11 @@
   }
 
   h1 {
-    @include font-sizing(65,70);
-    margin: 0.7em 0 0.6em;
+    @include font-sizing(65,60);
+    margin: 0.7em 0 0.4em;
+    &+p {
+      margin-top: 5px;
+    }
   }
 
   h2 {
@@ -43,10 +50,10 @@
 
   p {
     &+button, &+.btn {
-      margin-top: 45px;
+      margin-top: 25px;
     }
     &+h1, &+h2, &+h3 {
-      margin-top: 30px;
+      margin-top: 25px;
     }
     &.subtitle {
       @include font-sizing(30,46);
@@ -66,12 +73,34 @@
     }
   }
 
+  &.bx-call {
+    text-align: center;
+    h3 {
+      @include font-sizing(36,38);
+    }
+    p {
+      @include font-sizing(28,38);
+      margin: 10px;
+    }
+    .btn {
+      @include font-sizing(36,36);
+      margin: 10px 0;
+    }
+  }
+
+  &.bx-header {
+    text-align: center;
+    p.subtitle {
+      @include font-sizing(28,38);
+    }
+  }
+
   &.bx-normal {
     p.subtitle {
       @include font-sizing(36,50);
     }
     button, .btn {
-      @include font-sizing(30,46);
+      @include font-sizing(26,36);
       padding: 10px 20px;
     }
   }
@@ -79,7 +108,17 @@
   &.xpand {
     margin: 10px 0;
   }
-
+  &.breaker {
+    padding: 0;
+    overflow: hidden;
+    
+    video {
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -87,11 +126,13 @@
     align-content: stretch;
     justify-content: center;
 
-    .stacks {
+    [class^="stacks"],
+    [class*="stacks"] {
       margin-left: 23px;
       width: 85px;
       height: 65px;
-      border: 1px solid $brand-blue;
+      border-width: 1px;
+      border-style: solid;
       border-radius: 15px;
       -ms-transform: rotate(-24deg) skewX(35deg); /* IE 9 */
       -webkit-transform: rotate(-24deg) skewX(35deg); /* Safari */
@@ -115,14 +156,15 @@
 
 #main-wrapper {
     position: relative;
-
+    //overflow: hidden;
 }
 
 #main-content {
     position: relative;
     height: 100vh;
     padding: 55px 15px 15px 15px;
-
+    //padding: 55px 15px 15px 15px;
+    //overflow: hidden;
     z-index: 100;
     left: 0;
     -webkit-transform: translate(0, 0);

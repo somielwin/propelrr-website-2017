@@ -1,0 +1,39 @@
+.our-strategy {
+  .propelrr-stacks {
+    background: url('../../assets/images/propelrr.png');
+    background-size: cover;
+    background-color: #fff;
+    background-size: 59%;
+    background-position: top 105% right -28%;
+    background-repeat: no-repeat;
+    h3 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .cards {
+    margin: 0;
+
+    li {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+    [class^="stacks"],
+    [class*="stacks"] {
+      margin: 0 auto;
+    }
+
+    h3 {
+      margin: 20px 0;
+    }
+  }
+
+  .breaker {
+    &.image-01 {
+      background: url('../../assets/images/sample-05.jpg') no-repeat top center;
+      background-size: cover;
+      height: 400px;
+    }
+  }
+}

@@ -8,6 +8,7 @@ html, body {
 }
 //colors
 //color
+.clr-white { color: $white; }
 .clr-blue { color: $brand-blue; }
 .clr-dk-orange { color: $brand-dk-orange; }
 .clr-lt-orange { color: $brand-lt-orange; }
@@ -50,7 +51,7 @@ body {
 //Typography
   ul, ol {
     padding: 0;
-    margin: 0 0 0 20px;
+    margin: 0 0 20px 20px;
 
     &.free {
       list-style: none;
@@ -86,6 +87,10 @@ body {
 
   .overflow-hidden {
     overflow: hidden;
+  }
+
+  article {
+    margin-bottom: 58px;
   }
 }
 
