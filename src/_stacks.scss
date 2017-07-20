@@ -8,6 +8,9 @@
 @import "assets/sass/mixins/colors";
 @import "assets/sass/mixins/helper";
 
+//Import
+@import "assets/sass/import/owl.carousel/owl.carousel";
+
 //user interfaces
 @import "assets/sass/ui/general";
 @import "assets/sass/ui/forms";

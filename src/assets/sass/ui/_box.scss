@@ -94,7 +94,10 @@
       @include font-sizing(28,38);
     }
   }
-
+  &.kage-bunshin {
+    background-color: rgba(0,0,0,0.1) !important;
+    margin: 60px -25px -25px;
+  }
   &.bx-normal {
     p.subtitle {
       @include font-sizing(36,50);
@@ -111,7 +114,7 @@
   &.breaker {
     padding: 0;
     overflow: hidden;
-    
+
     video {
       width: auto;
       height: auto;

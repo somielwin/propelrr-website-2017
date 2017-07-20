@@ -25,7 +25,7 @@
   }
 }
 
-
+//marketing stack
 $stack-types: (
   channels : $brand-green,
   content  : $brand-dk-orange,
@@ -41,5 +41,22 @@ $stack-types: (
 @each $divtype, $color in $stack-types {
   .stacks-#{$divtype} {
     @include divstacks($color);
+  }
+}
+
+//product service
+$service-types: (
+  one : $brand-blue,
+  two  : $brand-dk-orange,
+  three : $brand-gray
+) !default;
+
+@mixin servicedot($dot-color) {
+  background-color: darken($dot-color, 15%) !important;
+}
+
+@each $servicedot, $dot-color in $service-types {
+  .service-#{$servicedot} .owl-dot.active span {
+    @include servicedot($dot-color);
   }
 }
