@@ -14,12 +14,17 @@ import { homeScrollDirective } from './directives/home-scroll.directive';
 import { InnerComponent } from './inner/inner.component';
 import { FeaturedWorkComponent } from './featured-work/featured-work-list.component';
 import { OurStrategyComponent } from './our-strategy/our-strategy.component';
+import { ProductServiceComponent } from './product-service/product-service.component';
 import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {
     path: '',
     component : HomeComponent
+  },
+  {
+    path: 'product-service',
+    component : ProductServiceComponent
   },
   {
     path: 'our-strategy',
