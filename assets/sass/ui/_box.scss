@@ -1,0 +1,154 @@
+.box {
+  padding: 15px;
+  background-color: $white;
+
+  h1, h2, h3 {
+    @include font-full(primary, 26, 40);
+    &+h4 {
+      margin: -0.5em 0 1em;
+    }
+  }
+
+  .lrg-txt {
+    font-size: 150%;
+  }
+  .lt-txt {
+    font-weight: 400;
+  }
+
+  h1 {
+    @include font-sizing(65,70);
+    margin: 0.7em 0 0.6em;
+  }
+
+  h2 {
+    @include font-sizing(25,25);
+    margin-bottom: 15px;
+    span {
+        display: block;
+        opacity: 0.6;
+    }
+  }
+
+  h3 {
+    @include font-sizing(45,45);
+    margin: 1.25em 0 0.7em;
+  }
+
+  h4 {
+      @include font-sizing(35,40);
+      font-weight: 300;
+  }
+
+  p {
+    &+button, &+.btn {
+      margin-top: 45px;
+    }
+    &+h1, &+h2, &+h3 {
+      margin-top: 30px;
+    }
+    &.subtitle {
+      @include font-sizing(30,46);
+    }
+  }
+
+  &.bx-intro {
+    background: transparent url('/assets/images/test.jpg') no-repeat center center;
+    background-size: cover;
+    button, .btn {
+      @include font-sizing(36,50);
+      padding: 10px 20px;
+    }
+  }
+
+  &.bx-normal {
+    p.subtitle {
+      @include font-sizing(36,50);
+    }
+    button, .btn {
+      @include font-sizing(30,46);
+      padding: 10px 20px;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    align-content: stretch;
+    justify-content: center;
+
+    .stacks {
+      margin-left: 23px;
+      width: 85px;
+      height: 65px;
+      border: 1px solid $brand-blue;
+      border-radius: 15px;
+      -ms-transform: rotate(-24deg) skewX(35deg); /* IE 9 */
+      -webkit-transform: rotate(-24deg) skewX(35deg); /* Safari */
+      transform: rotate(-24deg) skewX(35deg); /* Standard syntax */
+    }
+
+    > * {
+      width: 33.3%;
+      order: 1;
+      flex-grow: 1;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+
+      h3 {
+        @extend .lrg-txt;
+        color: $brand-gray;
+      }
+    }
+  }
+}
+
+#main-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+#main-content {
+    position: relative;
+    height: 100vh;
+    padding: 55px 15px 15px 15px;
+    z-index: 100;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: transform 0.3s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -moz-transition: transform 0.3s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: transform 0.3s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    @include breakpoint(tablet2) {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+}
+
+.android #main-content, .iphone #main-content {
+    height: calc(100vh - 55px);
+}
+
+.swipe-wrapper {
+	height: calc(100vh - 125px);
+
+    @include breakpoint(tablet2) {
+        height: 100vh;
+    }
+}
+
+.android .swipe-wrapper, .iphone .swipe-wrapper {
+    
+}
+
+#main-content.is-slide {
+    -webkit-transform: translate(300px, 0);
+    -moz-transform: translate(300px, 0);
+    transform: translate(300px, 0);
+    -webkit-transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -moz-transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}

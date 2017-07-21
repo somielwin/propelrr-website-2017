@@ -1,0 +1,195 @@
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// groups of multiplied css like CSS3 for cross browsing
+
+// for css3 transition
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+      -ms-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+// example use
+//.class-name { @include transition(all 0.5s ease); }
+
+// for css3 transition delay
+@mixin transition-delay($args...) {
+  -webkit-transition-delay: $args;
+     -moz-transition-delay: $args;
+      -ms-transition-delay: $args;
+       -o-transition-delay: $args;
+          transition-delay: $args;
+}
+// example use
+//.class-name { @include transition(all 0.5s ease); }
+
+
+
+// for css3 transform
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+// example use
+//.class-name { @include transition(all 0.5s ease); }
+
+
+
+// for css3 transform style
+@mixin transform-style($transform-style...) {
+  -webkit-transform: $transform-style;
+     -moz-transform: $transform-style;
+      -ms-transform: $transform-style;
+       -o-transform: $transform-style;
+          transform: $transform-style;
+}
+// example use
+//.class-name { @include transform-style(preserve-3d); }
+
+
+
+// for css3 animation
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} { @content; }
+     @-moz-keyframes #{$animation-name} { @content; }
+      @-ms-keyframes #{$animation-name} { @content; }
+       @-o-keyframes #{$animation-name} { @content; }
+          @keyframes #{$animation-name} { @content; }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+     -moz-animation: #{$str};
+      -ms-animation: #{$str};
+       -o-animation: #{$str};
+          animation: #{$str};
+}
+// for example use
+// @include keyframes(animationName) {
+//   0% { opacity: 1; }
+//   90% { opacity: 0; }
+// }
+// .class-name {
+//   @include animation('animationName 5s 3');
+// }
+
+
+
+@mixin animation-delay($animdelay) {
+  -webkit-animation-delay: #{$animdelay};
+     -moz-animation-delay: #{$animdelay};
+      -ms-animation-delay: #{$animdelay};
+       -o-animation-delay: #{$animdelay};
+          animation-delay: #{$animdelay};
+}
+
+
+@mixin animation-fill-mode($fillmode) {
+  -webkit-animation-fill-mode: #{$fillmode};
+     -moz-animation-fill-mode: #{$fillmode};
+      -ms-animation-fill-mode: #{$fillmode};
+       -o-animation-fill-mode: #{$fillmode};
+          animation-fill-mode: #{$fillmode};
+}
+// @include animation-fill-mode(forwards);
+
+
+// for border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+// example use
+//.class-name { @include border-radius(10px); }
+
+
+
+// for input appearance
+@mixin appearance($appearance) {
+  -webkit-appearance: $appearance;
+     -moz-appearance: $appearance;
+          appearance: $appearance;
+}
+// example use
+//.class-name { @include appearance(none); }
+
+
+
+// for user select
+@mixin user-select($userselect) {
+  -webkit-user-select: $userselect;
+     -moz-user-select: $userselect;
+      -ms-user-select: $userselect;
+          user-select: $userselect;
+}
+// example use
+//.class-name { @include user-select(none); }
+
+
+
+// for pointer events
+@mixin pointer-events($pointerevents) {
+  -webkit-pointer-events: $pointerevents;
+     -moz-pointer-events: $pointerevents;
+      -ms-pointer-events: $pointerevents;
+          pointer-events: $pointerevents;
+}
+// example use
+//.class-name { @include pointer-events(none); }
+
+
+
+// for box sizing
+@mixin box-sizing($boxsizing) {
+  -webkit-box-sizing: $boxsizing;
+     -moz-box-sizing: $boxsizing;
+      -ms-box-sizing: $boxsizing;
+          box-sizing: $boxsizing;
+}
+// example use
+//.class-name { @include pointer-events(none); }
+
+@mixin breakpoint($point) {
+  @if $point == maxwidth {
+    @media (max-width: $maxWidth) { @content; }
+  }
+  @else if $point == desktop {
+    @media (min-width: 1024px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == tablet2 {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == phablet {
+    @media (min-width: 641px)  { @content; }
+  }
+  @else if $point == mobile {
+    @media (min-width: 481px)  { @content; }
+  }
+  @else if $point == mobile2 {
+    @media (max-width: 400px)  { @content; }
+  }
+}
+
+// example use
+// @include breakpoint(tablet) {
+//  / put your css here /
+// }

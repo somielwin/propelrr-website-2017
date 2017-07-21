@@ -1,0 +1,97 @@
+$form-input-text: 'input[type="text"], input[type="password"], input[type="search"], input[type="email"], input[type="tel"], input[type="url"]';
+$form-input-buttons: 'input[type="submit"], input[type="reset"], input[type="button"]';
+$form-input-dates: 'input[type^="date"], input[type="month"], input[type="week"], input[type="time"]';
+$form-input-not-radio: 'input:not([type="radio"]):not([type="checkbox"])';
+
+label {
+  position: relative;
+  display: block;
+
+  span {
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    font-size: 12px;
+    left: 13px;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  #{$form-input-text}, #{$form-input-dates}, textarea {
+    &:focus {
+      &+span {
+        opacity: 0.4;
+      }
+    }
+    &[class="error"] {
+      &:focus {
+        &+span.title {
+          opacity: 0;
+        }
+        &~span.error-msg {
+          opacity: 0.9;
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+#{$form-input-text}, #{$form-input-dates}, textarea, input[type="file"] {
+    width: 100%;
+    border-width: 0 0 1px 0;
+    border-color: $primary-color;
+    padding: 9px 12px 7px;
+    margin: 10px 0;
+    outline: 0;
+    height: 36px;
+
+    &:focus {
+      border-color: $brand-blue;
+      color: $brand-blue;
+    }
+
+    &[class="error"] {
+      border-color: red;
+      color: red;
+    }
+}
+
+textarea {
+  resize: none;
+}
+
+//buttons
+button, .btn {
+  @include font-sizing(26,26);
+  background-color: $brand-gray;
+  color: #fff;
+  padding: 15px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  &:active {
+     transform: translateY(2px);
+     box-shadow: 1px 4px 7px rgba(0,0,0,.15);
+  }
+  &:hover {
+    background-color: lighten($brand-gray, 10%) ;
+  }
+}
+
+#{$form-input-buttons} {
+  @include font-sizing(20,20);
+  border: 1px solid lighten($primary-color, 50%);
+  background-color: $white;
+  text-decoration: none;
+  outline: none;
+  padding: 15px 20px;
+  &:active {
+     transform: translateY(2px);
+     box-shadow: 1px 4px 7px rgba(0,0,0,.15);
+  }
+}

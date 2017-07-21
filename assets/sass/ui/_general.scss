@@ -1,0 +1,91 @@
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+//colors
+//color
+.clr-blue { color: $brand-blue; }
+.clr-dk-orange { color: $brand-dk-orange; }
+.clr-lt-orange { color: $brand-lt-orange; }
+.clr-gray { color: $brand-gray; }
+.clr-green { color: $brand-green; }
+
+//background
+.bg-blue {
+  @include button-base($brand-blue);
+}
+
+.bg-dk-orange {
+  @include button-base($brand-dk-orange);
+}
+
+.bg-lt-orange {
+  @include button-base($brand-lt-orange);
+}
+
+.bg-gray {
+  @include button-base($brand-gray);
+}
+
+.bg-green {
+  @include button-base($brand-green);
+}
+
+body {
+  @include font-full(secondary, 22, 32);
+  color: $primary-color;
+  font-weight: 400;
+  background: url('/assets/images/propelrr.png') no-repeat center;
+  background-size: 300px 443px;
+  background-attachment: fixed;
+  background-position: 180px -35px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+//Typography
+  ul, ol {
+    padding: 0;
+    margin: 0 0 0 20px;
+
+    &.free {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  p, li {
+    color: lighten($primary-color, 20);
+  }
+
+  blockquote {
+    @include font-full(primary, 30,46);
+    font-style: italic;
+  }
+
+  a {
+    color: $brand-blue;
+    text-decoration: none;
+
+    &.shout {
+      border-bottom: 1px dashed $brand-blue;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $brand-blue;
+    }
+  }
+}
+
+//box-sizing
+*, *:before, *:after {
+  box-sizing: border-box;
+}
