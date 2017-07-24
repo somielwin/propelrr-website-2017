@@ -5,6 +5,7 @@ import { blogService} from './blog.service';
 
 @Component({
   selector: 'app-blog',
+  host: {'class':'blog'},
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
   providers: [blogService]

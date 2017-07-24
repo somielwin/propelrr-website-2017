@@ -3,6 +3,7 @@ import { Blog } from '../../blog.model';
 
 @Component({
   selector: 'app-blog-item',
+  host: {'class':'blog-item'},
   templateUrl: './blog-item.component.html',
   styleUrls: ['./blog-item.component.scss']
 })

@@ -3,6 +3,7 @@ import { Career } from '../../career.model';
 
 @Component({
   selector: 'app-career-item',
+  host :{'class':'career-item'},
   templateUrl: './career-item.component.html',
   styleUrls: ['./career-item.component.scss']
 })

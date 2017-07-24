@@ -1,16 +1,22 @@
 <app-header></app-header>
+<app-contact></app-contact>
 <div id="main-content">
-    <div class="head-tools">
-        <div class="header-hamburger" (click)="toggleHamburger()">
-            <a href="#">
+    <nav class="head-tools">
+      <div class="header-hamburger" (click)="toggleHamburger()">
+            <a href="javascript:void();">
             <span></span>
             <span></span>
             <span></span>
             </a>
         </div>
-    </div>
+        <div class="contact-links">
+          <a href="javascript:void(0);">Phone</a>
+          <a href="javascript:void(0);"(click)="toggleContactUs()">Message</a>
+        </div>
+    </nav>
     <router-outlet></router-outlet>
 </div>
+
 <!--<nav class="call-out">
   <a href="#" class="btn bg-blue">Contact Us</a>
   <a href="#" class="btn bg-dk-orange">Map</a>

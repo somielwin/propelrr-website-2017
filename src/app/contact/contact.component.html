@@ -1,0 +1,51 @@
+<section class="contact-form box bx-normal">
+    <form>
+      <a href="javascript:void(0)" (click)="toggleContactUs()" class="btn-close">close</a>
+      <h3>OK, Lets talk...</h3>
+      <p>Not a form person?, if you prefer to email our team directly. you can reach us on <strong>info@propelrr.com</strong>.</p>
+      <a href="javascript:void(0)" class="btn-call-us">or just simply <strong>CALL US</strong></a>
+      <div>
+        <label>
+          <input type="text" value="John Wick"/>
+          <span class="title">Your Name</span>
+          <span class="error-msg">You entered a wrong name format, please remove any appropriate characters.</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="password" value="12345678"/>
+          <span class="title">Your Password</span>
+          <span class="error-msg">Invalid password,  At least 3 special character: ~`!@#$%^&*.</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="email" value="john.wick@gmail.com"/>
+          <span class="title">Your Email</span>
+          <span class="error-msg">You entered an invalid email address, Please reenter it eq. your_email@email_provider.com</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="tel" value="0903939392"/>
+          <span class="title">Your Contact Number</span>
+          <span class="error-msg">this is not a correct contact number format.</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="url" value="http://www.johnwick.com"/>
+          <span class="title">Your Website</span>
+          <span class="error-msg">this is not a website url, kindly correct this one.</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <textarea>I took an arrow in the knee</textarea>
+          <span class="title">Your Message</span>
+          <span class="error-msg">Enter at least 200 words.</span>
+        </label>
+      </div>
+      <input type="submit" value="Submit"/>
+    </form>
+  </section>

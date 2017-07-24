@@ -1,0 +1,29 @@
+@import "src/stacks";
+.contact-form {
+  box-shadow: none;
+  position: relative;
+  text-align: center;
+
+  h3 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .btn-close {
+    background: transparent url('/assets/images/close.svg') center/24px no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 48px;
+    height: 48px;
+  }
+  .btn-call-us {
+    background-color: $brand-dk-orange;
+    color: $white;
+    padding: 10px;
+    width: 80%;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+}

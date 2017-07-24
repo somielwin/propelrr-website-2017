@@ -21,6 +21,7 @@ import { FeaturedWorkComponent } from './featured-work/featured-work-list.compon
 import { OurStrategyComponent } from './our-strategy/our-strategy.component';
 import { ProductServiceComponent } from './product-service/product-service.component';
 import { HeaderComponent } from './header/header.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HeaderComponent } from './header/header.component';
     ProductServiceComponent,
     FeaturedWorkComponent,
     OurStrategyComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'Propelrr'}),

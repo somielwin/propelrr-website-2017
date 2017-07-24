@@ -89,8 +89,11 @@ body {
     overflow: hidden;
   }
 
-  article {
+  article,
+  .career,
+  .blog {
     margin-bottom: 58px;
+    display: block;
   }
 }
 

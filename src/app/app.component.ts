@@ -14,6 +14,10 @@ export class AppComponent implements OnInit {
     $('#main-content, header').toggleClass('is-slide');
   }
 
+  toggleContactUs() {
+    $('#main-content, .contact-us').toggleClass('is-slide');
+  }
+
   ngOnInit() {
     // $(window).load(function(){
     //   window.scrollTo(0,1);

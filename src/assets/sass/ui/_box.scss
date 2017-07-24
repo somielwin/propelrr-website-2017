@@ -157,6 +157,14 @@
   }
 }
 
+//dev mode
+.iphone {
+  #main-wrapper,
+  #main-content {
+    overflow: hidden;
+  }
+}
+
 #main-wrapper {
     position: relative;
     //overflow: hidden;
@@ -166,7 +174,6 @@
     position: relative;
     height: 100vh;
     padding: 55px 15px 15px 15px;
-    //padding: 55px 15px 15px 15px;
     //overflow: hidden;
     z-index: 100;
     left: 0;
