@@ -18,6 +18,9 @@ import { ProductServiceComponent } from './product-service/product-service.compo
 import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ResultComponent } from './result/result.component';
+import { ResultListComponent } from './result/result-list/result-list.component';
+import { ResultItemComponent } from './result/result-list/result-item/result-item.component';
 
 const routes: Routes = [
   {
@@ -43,6 +46,10 @@ const routes: Routes = [
   {
     path: 'inner',
     component : InnerComponent
+  },
+  {
+    path: 'result',
+    component : ResultComponent
   },
   {
     path: 'blog',

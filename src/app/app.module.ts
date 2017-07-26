@@ -23,6 +23,9 @@ import { ProductServiceComponent } from './product-service/product-service.compo
 import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ResultComponent } from './result/result.component';
+import { ResultListComponent } from './result/result-list/result-list.component';
+import { ResultItemComponent } from './result/result-list/result-item/result-item.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     OurStrategyComponent,
     HeaderComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ResultComponent,
+    ResultListComponent,
+    ResultItemComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'Propelrr'}),

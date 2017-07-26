@@ -1,0 +1,63 @@
+<section class="box bx-intro">
+  <p><a href="#">Home</a> Search results for "agiled jsad dsad adsjds"</p>
+  <form>
+      <input type="search" placeholder="Search Here..."/>
+  </form>
+  <p><strong>432 Results Found</strong></p>
+</section>
+<app-result-list></app-result-list>
+<section class="box bg-dk-orange bx-call">
+  <h3>Are you having the same problem?</h3>
+  <p>You should call us, We can help!</p>
+  <a href="#" class="btn">Call Now</a>
+  <p>or send us a <a href="#" class="shout clr-white"><strong>message here</strong>.</a>
+</section>
+<section class="box bx-normal">
+  <form>
+    <h3>Contact Us</h3>
+    <div>
+      <label>
+        <input type="text" value="John Wick"/>
+        <span class="title">Your Name</span>
+        <span class="error-msg">You entered a wrong name format, please remove any appropriate characters.</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="password" value="12345678"/>
+        <span class="title">Your Password</span>
+        <span class="error-msg">Invalid password,  At least 3 special character: ~`!@#$%^&*.</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="email" value="john.wick@gmail.com"/>
+        <span class="title">Your Email</span>
+        <span class="error-msg">You entered an invalid email address, Please reenter it eq. your_email@email_provider.com</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="tel" value="0903939392"/>
+        <span class="title">Your Contact Number</span>
+        <span class="error-msg">this is not a correct contact number format.</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="url" value="http://www.johnwick.com"/>
+        <span class="title">Your Website</span>
+        <span class="error-msg">this is not a website url, kindly correct this one.</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <textarea>I took an arrow in the knee</textarea>
+        <span class="title">Your Message</span>
+        <span class="error-msg">Enter at least 200 words.</span>
+      </label>
+    </div>
+    <input type="submit" value="Submit"/>
+  </form>
+</section>
+<router-outlet></router-outlet>
