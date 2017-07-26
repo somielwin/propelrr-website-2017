@@ -13,7 +13,7 @@ header {
     -webkit-transform: translate(-300px, 0);
     -moz-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    
+
     -webkit-transition: transform 0.3s 0s cubic-bezier(0.645, 0.045, 0.355, 1);
     -moz-transition: transform 0.3s 0s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: transform 0.3s 0s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -28,59 +28,74 @@ header.is-slide {
     transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-nav > ul > li {
-    display: block;
-    margin-bottom: 15px;
-    position: relative;
-}
+nav {
+  ul {
+    margin-left: 0;
 
-nav > ul > li > a {
-    text-decoration: none;
-    color: #fff;
-    padding: 5px 0;
-    font-size: 18px;
-}
+    li {
+      display: block;
+      margin-bottom: 15px;
+      position: relative;
+      margin-left: 10px;
 
-nav > ul > li:before {
-    content:'';
-    display: block;
-    width: 3px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #ee6730;
-    opacity: 0;
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 0;
+        font-size: 18px;
+      }
 
-}
+      &:before {
+        content:'';
+        display: block;
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #ee6730;
+        opacity: 0;
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+      }
 
-nav > ul > li.active {
-    padding-left: 20px;
-}
 
-nav > ul > li.active:before {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    opacity: 1;
-}
+      &:hover {
+        color: #ee6730;
+      }
 
-nav > ul > li.active a {
-    color: #ee6730;
-}
+      &.active {
+        padding-left: 20px;
 
-nav > ul > li:hover a {
-    color: #ee6730;
+        &:before {
+          transform: scale(1);
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          opacity: 1;
+        }
+
+        a {
+          color: #ee6730;
+        }
+      }
+    }
+  }
 }
 
 .header-loc {
     font-size: 12px;
+    margin: 45px 0 0 10px;
+
+    p {
+      color: #fff;
+      margin: 5px 0 10px;
+      line-height: 22px;
+      opacity: 0.5;
+    }
 }
 
 .propelrr-number {
@@ -97,14 +112,19 @@ nav > ul > li:hover a {
 }
 
 .social-media-list {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
-.social-media-list ul li {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 8px;
+.social-media-list {
+  ul {
+    margin-left: 10px;
+    li {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
+    }
+  }
 }
 
 .social-media-list ul li a {
