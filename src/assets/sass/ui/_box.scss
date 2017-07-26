@@ -21,6 +21,10 @@
     font-weight: 400;
   }
 
+  &.hfull {
+    height: 100%;
+  }
+
   h1 {
     @include font-sizing(65,60);
     margin: 0.7em 0 0.4em;

@@ -1,8 +1,10 @@
-@import "src/stacks";
+@import "src/_stacks";
 .contact-form {
   box-shadow: none;
   position: relative;
   text-align: center;
+  padding: 0;
+  margin: 10px;
 
   h3 {
     text-align: center;
@@ -11,8 +13,8 @@
   .btn-close {
     background: transparent url('/assets/images/close.svg') center/24px no-repeat;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -30px;
+    right: -20px;
     display: block;
     text-indent: -9999px;
     width: 48px;
