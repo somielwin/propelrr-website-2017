@@ -7,11 +7,13 @@
 @import "assets/sass/mixins/type";
 @import "assets/sass/mixins/colors";
 @import "assets/sass/mixins/helper";
+@import "assets/sass/mixins/font";
 
 //Import
 @import "assets/sass/import/owl.carousel/owl.carousel";
 
 //user interfaces
 @import "assets/sass/ui/general";
+@import "assets/sass/ui/font";
 @import "assets/sass/ui/forms";
 @import "assets/sass/ui/box";

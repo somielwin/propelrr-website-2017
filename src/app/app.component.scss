@@ -124,7 +124,7 @@
 .contact-us {
     background: $white;
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     padding: 15px;
     z-index: 1001;
@@ -152,6 +152,7 @@
     -webkit-transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     -moz-transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+		top: 0;
 
 		+ #main-content {
 		    -webkit-transform: translate(0, 100%);

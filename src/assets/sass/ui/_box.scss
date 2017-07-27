@@ -4,7 +4,6 @@
   @include box-shadow(0,1px,2px, rgba(0,0,0,0.1))
 
   h1, h2, h3 {
-    @include font-full(primary, 26, 40);
     &+h4 {
       margin: -0.5em 0 1em;
     }
@@ -26,7 +25,6 @@
   }
 
   h1 {
-    @include font-sizing(65,60);
     margin: 0.7em 0 0.4em;
     &+p {
       margin-top: 5px;
@@ -34,7 +32,6 @@
   }
 
   h2 {
-    @include font-sizing(25,25);
     margin-bottom: 15px;
     span {
         display: block;
@@ -43,12 +40,10 @@
   }
 
   h3 {
-    @include font-sizing(45,45);
     margin: 1.25em 0 0.7em;
   }
 
   h4 {
-      @include font-sizing(35,40);
       font-weight: 300;
   }
 
@@ -60,7 +55,8 @@
       margin-top: 25px;
     }
     &.subtitle {
-      @include font-sizing(30,46);
+      @include responsive-font(3vw, 28px, 36px);
+      font-weight: 300;
     }
 
     &.img {
@@ -72,7 +68,7 @@
     background: $white url('/assets/images/test.jpg') no-repeat center center;
     background-size: cover;
     button, .btn {
-      @include font-sizing(36,50);
+      @include responsive-font(3vw, 36px, 40px);
       padding: 10px 20px;
     }
   }
@@ -80,14 +76,14 @@
   &.bx-call {
     text-align: center;
     h3 {
-      @include font-sizing(36,38);
+      @include responsive-font(3vw, 28px, 36px);
     }
     p {
-      @include font-sizing(28,38);
+      @include responsive-font(3vw, 20px, 24px);
       margin: 10px;
     }
     .btn {
-      @include font-sizing(36,36);
+      @include responsive-font(3vw, 25px, 30px);
       margin: 10px 0;
     }
   }
@@ -95,7 +91,7 @@
   &.bx-header {
     text-align: center;
     p.subtitle {
-      @include font-sizing(28,38);
+      @include responsive-font(3vw, 28px, 36px);
     }
   }
   &.kage-bunshin {
@@ -104,10 +100,10 @@
   }
   &.bx-normal {
     p.subtitle {
-      @include font-sizing(36,50);
+      @include responsive-font(3vw, 26px, 36px);
     }
     button, .btn {
-      @include font-sizing(26,36);
+      @include responsive-font(3vw, 20px, 24px);
       padding: 10px 20px;
     }
   }
