@@ -55,7 +55,7 @@
       margin-top: 25px;
     }
     &.subtitle {
-      @include responsive-font(3vw, 28px, 36px);
+      @include responsive-font(3vw, 20px, 30px);
       font-weight: 300;
     }
 
@@ -91,7 +91,7 @@
   &.bx-header {
     text-align: center;
     p.subtitle {
-      @include responsive-font(3vw, 28px, 36px);
+      @include responsive-font(3vw, 22px, 32px);
     }
   }
   &.kage-bunshin {

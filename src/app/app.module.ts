@@ -26,6 +26,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ResultComponent } from './result/result.component';
 import { ResultListComponent } from './result/result-list/result-list.component';
 import { ResultItemComponent } from './result/result-list/result-item/result-item.component';
+import { SearchMeComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ResultItemComponent } from './result/result-list/result-item/result-ite
     PageNotFoundComponent,
     ResultComponent,
     ResultListComponent,
-    ResultItemComponent
+    ResultItemComponent,
+    SearchMeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'Propelrr'}),

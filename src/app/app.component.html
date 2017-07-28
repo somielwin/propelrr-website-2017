@@ -10,10 +10,12 @@
             </a>
         </div>
         <div class="contact-links">
-          <a href="javascript:void(0);">Phone</a>
-          <a href="javascript:void(0);"(click)="toggleContactUs()">Message</a>
+          <a href="javascript:void(0);" (click)="toggleSearchMe()" class="search">search</a>
+          <a href="javascript:void(0);" class="phone">Phone</a>
+          <a href="javascript:void(0);" (click)="toggleContactUs()" class="message">Message</a>
         </div>
     </nav>
+    <app-search></app-search>
     <router-outlet></router-outlet>
 </div>
 

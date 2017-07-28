@@ -18,6 +18,10 @@ export class AppComponent implements OnInit {
     $('#main-content, .contact-us').toggleClass('is-slide');
   }
 
+  toggleSearchMe() {
+    $('.search-form').toggleClass('show');
+  }
+  
   ngOnInit() {
     // $(window).load(function(){
     //   window.scrollTo(0,1);

@@ -88,6 +88,7 @@ button, .btn {
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  outline: 0;
   &:active {
      transform: translateY(2px);
      box-shadow: 1px 4px 7px rgba(0,0,0,.15);

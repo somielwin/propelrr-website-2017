@@ -103,11 +103,15 @@
 .contact-links {
 	float: right;
 	a {
-		&:first-child {
+		&.search {
+			 background: transparent url('/assets/images/search.svg') center/24px no-repeat;
+		}
+
+		&.phone {
 			 background: transparent url('/assets/images/phone.svg') center/24px no-repeat;
 		}
 
-		&:last-child {
+		&.message {
 			 background: transparent url('/assets/images/message.svg') center/24px no-repeat;
 		}
 
